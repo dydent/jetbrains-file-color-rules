@@ -1,0 +1,45 @@
+<idea-plugin>
+    <id>dev.dydent.filecolorrules</id>
+    <name>File Color Rules</name>
+    <vendor url="https://github.com/dydent">dydent</vendor>
+
+    <description><![CDATA[
+    Color Project View files and folders with fast, project-local YAML rules. File Color Rules supports
+    ordered glob and RE2/J regular-expression matching, nested conditions, theme-aware palettes, hot reload,
+    context actions, and an in-IDE configuration editor. It performs no telemetry or runtime network requests.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <incompatible-with>com.intellij.jetbrains.client</incompatible-with>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <editorTabColorProvider implementation="dev.dydent.filecolorrules.integration.FileColorProvider"/>
+        <projectConfigurable
+                parentId="appearance"
+                id="dev.dydent.filecolorrules.settings"
+                displayName="File Color Rules"
+                nonDefaultProject="true"
+                instance="dev.dydent.filecolorrules.settings.FileColorRulesConfigurable"/>
+        <notificationGroup id="File Color Rules" displayType="BALLOON" isLogByDefault="true"/>
+    </extensions>
+
+    <actions>
+        <group id="dev.dydent.filecolorrules.projectViewGroup" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <separator/>
+            <action id="dev.dydent.filecolorrules.colorExact"
+                    class="dev.dydent.filecolorrules.actions.ColorExactPathAction"
+                    text="Color this file/folder"/>
+            <action id="dev.dydent.filecolorrules.colorDescendants"
+                    class="dev.dydent.filecolorrules.actions.ColorDescendantsAction"
+                    text="Color this folder and descendants"/>
+            <action id="dev.dydent.filecolorrules.removeDirect"
+                    class="dev.dydent.filecolorrules.actions.RemoveDirectColorAction"
+                    text="Remove direct color rule"/>
+            <separator/>
+            <action id="dev.dydent.filecolorrules.openSettings"
+                    class="dev.dydent.filecolorrules.actions.OpenSettingsAction"
+                    text="Open File Color Rules Settings"/>
+        </group>
+    </actions>
+</idea-plugin>
