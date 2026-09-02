@@ -24,7 +24,7 @@
     </extensions>
 
     <actions>
-        <group id="dev.dydent.filecolorrules.projectViewGroup" popup="true">
+        <group id="dev.dydent.filecolorrules.projectViewGroup" text="File Color Rules" popup="true">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
             <separator/>
             <action id="dev.dydent.filecolorrules.colorExact"
