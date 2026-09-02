@@ -4,6 +4,12 @@ All notable changes to File Color Rules are documented here. The project follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-09-02
+
+### Fixed
+
+- Give the Project View context-action submenu its visible File Color Rules label.
+
 ## [0.1.0] - 2026-08-26
 
 ### Added
@@ -16,5 +22,6 @@ All notable changes to File Color Rules are documented here. The project follows
 - Settings editor, path tester, and Project View context actions.
 - Build, test, verification, signing, and release automation.
 
-[Unreleased]: https://github.com/dydent/jetbrains-file-color-rules/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/dydent/jetbrains-file-color-rules/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/dydent/jetbrains-file-color-rules/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/dydent/jetbrains-file-color-rules/releases/tag/v0.1.0
