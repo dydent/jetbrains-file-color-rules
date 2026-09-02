@@ -17,7 +17,7 @@ kotlin {
 }
 
 dependencies {
-    implementation("org.snakeyaml:snakeyaml-engine:2.10")
+    implementation("org.snakeyaml:snakeyaml-engine:3.1.1")
     implementation("com.google.re2j:re2j:1.8")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.2")
 
